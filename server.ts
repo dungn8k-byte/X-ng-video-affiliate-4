@@ -688,26 +688,64 @@ Hãy xuất kết quả hoàn toàn bằng cấu trúc JSON chuẩn theo đúng 
 
       const targetModel = model && String(model).trim() ? String(model).trim() : 'gemini-2.5-flash-preview-tts';
       console.log(`[VoiceFactory Server] Calling Gemini TTS (${targetModel}) for ${videoId}...`);
+      let ttsTimeoutHandle: ReturnType<typeof setTimeout> | null = null;
+
       try {
-        const response = await ai.models.generateContent({
-          model: targetModel,
-          contents: [{ parts: [{ text: promptToModel }] }],
-          config: {
-            responseModalities: ['AUDIO'],
-            speechConfig: {
-              voiceConfig: {
-                prebuiltVoiceConfig: { voiceName: selectedVoice },
+        const response = await Promise.race([
+          ai.models.generateContent({
+            model: targetModel,
+            contents: [{ parts: [{ text: promptToModel }] }],
+            config: {
+              responseModalities: ['AUDIO'],
+              speechConfig: {
+                voiceConfig: {
+                  prebuiltVoiceConfig: { voiceName: selectedVoice },
+                },
               },
             },
-          },
-        });
+          }),
+          new Promise<never>((_, reject) => {
+            ttsTimeoutHandle = setTimeout(() => {
+              const timeoutError: any = new Error(
+                'Gemini TTS phản hồi quá thời gian. Không có yêu cầu tự động thử lại. Hãy thử lại thủ công.'
+              );
+              timeoutError.code = 'TTS_TIMEOUT';
+              reject(timeoutError);
+            }, 60_000);
+          }),
+        ]);
+
+        if (ttsTimeoutHandle) {
+          clearTimeout(ttsTimeoutHandle);
+          ttsTimeoutHandle = null;
+        }
 
         const inlineAudio = response.candidates?.[0]?.content?.parts?.[0]?.inlineData?.data;
         if (inlineAudio) {
           base64Audio = inlineAudio;
         }
       } catch (err: any) {
+        if (ttsTimeoutHandle) {
+          clearTimeout(ttsTimeoutHandle);
+          ttsTimeoutHandle = null;
+        }
+
         console.error(`[VoiceFactory Server] Gemini API error for ${videoId}:`, err);
+
+        if (err?.code === 'TTS_TIMEOUT') {
+          const message =
+            'Gemini TTS phản hồi quá thời gian. Không có yêu cầu tự động thử lại. Hãy thử lại thủ công.';
+
+          return res.status(504).json({
+            success: false,
+            code: 'TTS_TIMEOUT',
+            httpStatus: 504,
+            retryable: false,
+            message,
+            error: message,
+          });
+        }
+
         const parsed = parseGeminiError(err);
 
         if (parsed.isRateLimited) {

@@ -34,30 +34,64 @@ export interface GenerateVoiceResponse {
 export async function generateVoiceWithGemini(
   request: GenerateVoiceRequest
 ): Promise<GenerateVoiceResponse> {
-  const response = await fetch('/api/generate-voice', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(request),
-  });
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 75_000);
 
-  const data = await response.json().catch(() => ({}));
+  try {
+    const response = await fetch('/api/generate-voice', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(request),
+      signal: controller.signal,
+    });
 
-  if (!response.ok || !data.success) {
-    const errorMsg = data.message || data.error || `HTTP ${response.status}: Lỗi khi tạo audio voice-over`;
-    const error = new Error(errorMsg);
-    (error as any).status = response.status;
-    (error as any).httpStatus = data.httpStatus || response.status;
-    (error as any).code = data.code || (response.status === 429 ? 'RATE_LIMITED' : response.status === 503 ? 'SERVICE_UNAVAILABLE' : 'INTERNAL_ERROR');
-    (error as any).retryable = data.retryable ?? (response.status === 429 || response.status === 503);
-    (error as any).retryAfterSec = typeof data.retryAfterSec === 'number' ? data.retryAfterSec : 60;
-    (error as any).isDailyQuotaExceeded = !!data.isDailyQuotaExceeded;
-    (error as any).quotaId = data.quotaId;
-    throw error;
+    const data = await response.json().catch(() => ({}));
+
+    if (!response.ok || !data.success) {
+      const errorMsg =
+        data.message ||
+        data.error ||
+        `HTTP ${response.status}: Lỗi khi tạo audio voice-over`;
+
+      const error = new Error(errorMsg);
+      (error as any).status = response.status;
+      (error as any).httpStatus = data.httpStatus || response.status;
+      (error as any).code =
+        data.code ||
+        (response.status === 429
+          ? 'RATE_LIMITED'
+          : response.status === 503
+          ? 'SERVICE_UNAVAILABLE'
+          : 'INTERNAL_ERROR');
+      (error as any).retryable =
+        data.retryable ?? (response.status === 429 || response.status === 503);
+      (error as any).retryAfterSec =
+        typeof data.retryAfterSec === 'number' ? data.retryAfterSec : 60;
+      (error as any).isDailyQuotaExceeded = !!data.isDailyQuotaExceeded;
+      (error as any).quotaId = data.quotaId;
+
+      throw error;
+    }
+
+    return data;
+  } catch (err: any) {
+    if (err?.name === 'AbortError') {
+      const timeoutError = new Error(
+        'Gemini TTS phản hồi quá thời gian. Không có yêu cầu tự động thử lại. Hãy thử lại thủ công.'
+      );
+      (timeoutError as any).status = 504;
+      (timeoutError as any).httpStatus = 504;
+      (timeoutError as any).code = 'TTS_TIMEOUT';
+      (timeoutError as any).retryable = false;
+      throw timeoutError;
+    }
+
+    throw err;
+  } finally {
+    clearTimeout(timeoutId);
   }
-
-  return data;
 }
 
 // Preview Voice Profile
