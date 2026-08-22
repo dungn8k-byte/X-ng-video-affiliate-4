@@ -191,9 +191,9 @@ export const P001_VARIATIONS: VideoVariation[] = [
   {
     id: 'P001_V01',
     salesAngle: 'PRICE / VALUE (Giá trị vượt trội & Quà tặng)',
-    salesAngleDesc: 'Nhấn mạnh giá chỉ 385.000đ cho giày da bò thật mềm êm kèm quà tặng tất ren vintage, so sánh với giá boutique 700-900k.',
+    salesAngleDesc: 'Nhấn mạnh giá chỉ 59.600đ cho giày da bò thật mềm êm kèm quà tặng tất ren vintage, so sánh với giá boutique 700-900k.',
     hook: 'Đừng chi gần triệu bạc ra shop mua giày Mary Jane nếu bạn chưa biết đến em này!',
-    voiceScript: 'Đừng chi gần triệu bạc ra shop mua giày Mary Jane nếu bạn chưa biết đến em này. Chỉ ba trăm tám mươi lăm cành mà làm từ da bò thật mềm êm, mũi tròn phối nơ siêu xinh. Đế cao su đúc ba phân rưỡi hack dáng cực khéo, đi bộ cả ngày không lo đau gót. Đợt này còn được tặng kèm đôi tất ren vintage nữa. Nhấn ngay vào giỏ hàng bên dưới để rinh ngay ưu đãi nhé!',
+    voiceScript: 'Đừng chi gần triệu bạc ra shop mua giày Mary Jane nếu bạn chưa biết đến em này. Chỉ chưa tới sáu mươi nghìn mà làm từ da bò thật mềm êm, mũi tròn phối nơ siêu xinh. Đế cao su đúc ba phân rưỡi hack dáng cực khéo, đi bộ cả ngày không lo đau gót. Đợt này còn được tặng kèm đôi tất ren vintage nữa. Nhấn ngay vào giỏ hàng bên dưới để rinh ngay ưu đãi nhé!',
     estimatedDuration: '19s',
     timeline: [
       {
@@ -218,13 +218,13 @@ export const P001_VARIATIONS: VideoVariation[] = [
         timeRange: '00:15 - 00:19',
         shotId: 'S001',
         shotTitle: 'S001 Hero Shot',
-        visualAction: 'Quay lại góc Hero Shot với sticker giỏ hàng nhấp nháy và giá ưu đãi 385.000đ.',
+        visualAction: 'Quay lại góc Hero Shot với sticker giỏ hàng nhấp nháy và giá ưu đãi 59.600đ.',
       },
     ],
     onScreenText: {
       hookText: 'ĐỪNG MUA GIÀY TIỆM 800K VỘI!',
       benefitText: 'Da bò thật mềm êm • Đế 3.5cm không đau chân • Tặng tất ren',
-      ctaText: '385K + TẶNG TẤT REN ➔ BẤM GIỎ HÀNG GÓC TRÁI',
+      ctaText: '59.600Đ + TẶNG TẤT REN ➔ BẤM GIỎ HÀNG GÓC TRÁI',
     },
     cta: 'Nhấn ngay vào giỏ hàng bên dưới để rinh ngay ưu đãi nhé!',
     editingInstructions: {
@@ -249,7 +249,7 @@ export const P001_VARIATIONS: VideoVariation[] = [
       },
       hasFakePersonalExperience: false,
       claims: [
-        { claim: 'Giá 385.000đ', source: 'Product Profile', status: 'VERIFIED' },
+        { claim: 'Giá 59.600đ', source: 'Product Profile', status: 'VERIFIED' },
         { claim: 'Chất liệu da bò thật mềm êm', source: 'Verified Facts', status: 'VERIFIED' },
         { claim: 'Mũi tròn phối nơ thủ công', source: 'Verified Facts', status: 'VERIFIED' },
         { claim: 'Đế cao su đúc 3.5cm chống trượt', source: 'Verified Facts', status: 'VERIFIED' },
@@ -263,7 +263,7 @@ export const P001_VARIATIONS: VideoVariation[] = [
     salesAngle: 'CURIOSITY (Tò mò & Khám phá xu hướng)',
     salesAngleDesc: 'Khai thác sự tò mò vì sao mẫu Mary Jane này lại tạo nên cơn sốt phong cách French Chic.',
     hook: 'Tại sao hội mê phong cách French Chic lại săn lùng đôi Mary Jane nơ da này nhiều đến vậy?',
-    voiceScript: 'Tại sao hội mê phong cách French Chic lại săn lùng đôi Mary Jane nơ da này nhiều đến vậy? Bí quyết nằm ở chất da bò thật siêu mềm ôm chân, form mũi tròn cổ điển vừa vặn với mọi dáng bàn chân. Lót trong đệm bọt biển êm ái, đế ba phân rưỡi chống trượt cực xịn. Giá chỉ ba trăm tám mươi lăm cành còn tặng tất ren xinh xỉu. Xem ngay chi tiết trong giỏ hàng nha!',
+    voiceScript: 'Tại sao hội mê phong cách French Chic lại săn lùng đôi Mary Jane nơ da này nhiều đến vậy? Bí quyết nằm ở chất da bò thật siêu mềm ôm chân, form mũi tròn cổ điển vừa vặn với mọi dáng bàn chân. Lót trong đệm bọt biển êm ái, đế ba phân rưỡi chống trượt cực xịn. Giá chỉ chưa tới sáu mươi nghìn còn tặng tất ren xinh xỉu. Xem ngay chi tiết trong giỏ hàng nha!',
     estimatedDuration: '20s',
     timeline: [
       {
@@ -322,7 +322,7 @@ export const P001_VARIATIONS: VideoVariation[] = [
         { claim: 'Chất da bò thật siêu mềm ôm chân', source: 'Verified Facts', status: 'VERIFIED' },
         { claim: 'Lót trong đệm bọt biển êm ái', source: 'Verified Facts', status: 'VERIFIED' },
         { claim: 'Đế 3.5cm chống trượt', source: 'Verified Facts', status: 'VERIFIED' },
-        { claim: 'Giá 385.000đ', source: 'Product Profile', status: 'VERIFIED' },
+        { claim: 'Giá 59.600đ', source: 'Product Profile', status: 'VERIFIED' },
         { claim: 'Tặng kèm tất ren', source: 'Product Profile', status: 'VERIFIED' },
       ],
       feedback: 'Góc tiếp cận hấp dẫn, chuyển đổi tự nhiên sang tính năng và ưu đãi thực tế.',
@@ -332,8 +332,8 @@ export const P001_VARIATIONS: VideoVariation[] = [
     id: 'P001_V03',
     salesAngle: 'PRODUCT DETAIL (Soi cận cảnh chất liệu & Đường may)',
     salesAngleDesc: 'Đưa camera vào sát từng đường kim mũi chỉ, vân da thật và cấu trúc đế cao su 3.5cm.',
-    hook: 'Soi cận cảnh đôi Mary Jane da bò thật 385 cành xem có xịn sò như lời đồn không nha!',
-    voiceScript: 'Soi cận cảnh đôi Mary Jane da bò thật ba trăm tám mươi lăm cành xem có xịn sò như lời đồn không nha! Từng đường kim mũi chỉ trên nơ da đều được may thủ công cực tỉ mỉ. Quai cài kim loại mạ sáng bóng, đế cao su đúc nguyên khối ba chấm năm centimet cực kỳ bám đường. Bên trong là lớp lót thoáng khí êm ru. Mức giá quá hời cho một đôi giày da thật, bấm giỏ hàng trải nghiệm ngay!',
+    hook: 'Soi cận cảnh đôi Mary Jane da bò thật chưa tới sáu mươi nghìn xem có xịn sò như lời đồn không nha!',
+    voiceScript: 'Soi cận cảnh đôi Mary Jane da bò thật chưa tới sáu mươi nghìn xem có xịn sò như lời đồn không nha! Từng đường kim mũi chỉ trên nơ da đều được may thủ công cực tỉ mỉ. Quai cài kim loại mạ sáng bóng, đế cao su đúc nguyên khối ba chấm năm centimet cực kỳ bám đường. Bên trong là lớp lót thoáng khí êm ru. Mức giá quá hời cho một đôi giày da thật, bấm giỏ hàng trải nghiệm ngay!',
     estimatedDuration: '21s',
     timeline: [
       {
@@ -362,7 +362,7 @@ export const P001_VARIATIONS: VideoVariation[] = [
       },
     ],
     onScreenText: {
-      hookText: 'SOI CẬN CẢNH DA THẬT 385K',
+      hookText: 'SOI CẬN CẢNH DA THẬT 59.600Đ',
       benefitText: 'May thủ công tỉ mỉ • Khóa kim loại sáng bóng • Đế đúc bám đường',
       ctaText: 'HÀNG CHUẨN DA THẬT ➔ MUA TẠI GIỎ HÀNG NÀY',
     },
@@ -403,7 +403,7 @@ export const P001_VARIATIONS: VideoVariation[] = [
     salesAngle: 'STYLE / USE CASE (Phối đồ đa năng đi học, đi làm, cà phê)',
     salesAngleDesc: 'Gợi ý tính ứng dụng cao: 1 đôi giày phối được 5 outfit từ Vintage Lolita đến Parisian Chic công sở.',
     hook: 'Chỉ với một đôi Mary Jane vintage này, bạn có thể biến hóa đủ 5 outfit đi học, đi làm hay cà phê!',
-    voiceScript: 'Chỉ với một đôi Mary Jane vintage này, bạn có thể biến hóa đủ năm outfit từ đi học, đi làm đến dạo phố cuối tuần. Phối cùng chân váy xòe, quần âu hay đầm lolita đều toát lên vẻ thanh lịch chuẩn Parisian Chic. Đế ba chấm năm phân tôn dáng nhẹ nhàng, đi làm cả ngày vẫn êm ái tuyệt đối. Chỉ ba trăm tám mươi lăm cành tặng kèm tất ren, nhanh tay bấm vào góc trái màn hình rinh về nhé!',
+    voiceScript: 'Chỉ với một đôi Mary Jane vintage này, bạn có thể biến hóa đủ năm outfit từ đi học, đi làm đến dạo phố cuối tuần. Phối cùng chân váy xòe, quần âu hay đầm lolita đều toát lên vẻ thanh lịch chuẩn Parisian Chic. Đế ba chấm năm phân tôn dáng nhẹ nhàng, đi làm cả ngày vẫn êm ái tuyệt đối. Chỉ chưa tới sáu mươi nghìn tặng kèm tất ren, nhanh tay bấm vào góc trái màn hình rinh về nhé!',
     estimatedDuration: '22s',
     timeline: [
       {
@@ -434,7 +434,7 @@ export const P001_VARIATIONS: VideoVariation[] = [
     onScreenText: {
       hookText: '1 ĐÔI GIÀY CÂN 5 OUTFIT',
       benefitText: 'Đi học • Đi làm • Dạo phố • Đế 3.5cm tôn dáng nhẹ nhàng',
-      ctaText: '385K TẶNG TẤT REN ➔ CHẠM GÓC TRÁI MUA NGAY',
+      ctaText: '59.600Đ TẶNG TẤT REN ➔ CHẠM GÓC TRÁI MUA NGAY',
     },
     cta: 'Nhanh tay bấm vào góc trái màn hình rinh về nhé!',
     editingInstructions: {
@@ -462,7 +462,7 @@ export const P001_VARIATIONS: VideoVariation[] = [
         { claim: 'Phối đồ đi học, đi làm, dạo phố', source: 'Target Customer', status: 'VERIFIED' },
         { claim: 'Đế 3.5cm tôn dáng', source: 'Verified Facts', status: 'VERIFIED' },
         { claim: 'Chất liệu da bò êm chân', source: 'Verified Facts', status: 'VERIFIED' },
-        { claim: 'Giá 385.000đ tặng tất ren', source: 'Product Profile', status: 'VERIFIED' },
+        { claim: 'Giá 59.600đ tặng tất ren', source: 'Product Profile', status: 'VERIFIED' },
       ],
       feedback: 'Tập trung vào tính ứng dụng thời trang cao, thông điệp rõ ràng, chốt đơn mạnh mẽ.',
     },
@@ -472,7 +472,7 @@ export const P001_VARIATIONS: VideoVariation[] = [
     salesAngle: 'NATURAL PRODUCT INTRODUCTION (Giới thiệu chân ái êm chân)',
     salesAngleDesc: 'Giới thiệu tự nhiên, gần gũi như một người bạn thân giới thiệu món đồ êm chân ưng ý.',
     hook: 'Nếu bạn đang tìm một đôi giày vừa êm chân vừa thanh lịch thì Mary Jane nơ da chính là chân ái!',
-    voiceScript: 'Nếu bạn đang tìm một đôi giày vừa êm chân vừa thanh lịch thì Mary Jane nơ da chính là chân ái. Thiết kế da bò mềm mại, quai ngang thanh mảnh ôm gọn bàn chân. Đế cao su đúc ba phân rưỡi chống trượt an toàn, lót trong êm ái nâng niu từng bước đi. Chỉ ba trăm tám mươi lăm ngàn tặng kèm tất ren vintage sang chảnh. Click giỏ hàng đặt ngay hôm nay kẻo lỡ ưu đãi nhé!',
+    voiceScript: 'Nếu bạn đang tìm một đôi giày vừa êm chân vừa thanh lịch thì Mary Jane nơ da chính là chân ái. Thiết kế da bò mềm mại, quai ngang thanh mảnh ôm gọn bàn chân. Đế cao su đúc ba phân rưỡi chống trượt an toàn, lót trong êm ái nâng niu từng bước đi. Chỉ chưa tới sáu mươi nghìn tặng kèm tất ren vintage sang chảnh. Click giỏ hàng đặt ngay hôm nay kẻo lỡ ưu đãi nhé!',
     estimatedDuration: '21s',
     timeline: [
       {
@@ -503,7 +503,7 @@ export const P001_VARIATIONS: VideoVariation[] = [
     onScreenText: {
       hookText: 'CHÂN ÁI ÊM CHÂN MÙA NÀY',
       benefitText: 'Da bò mềm mại • Đế cao su đúc 3.5cm • Lót đệm nâng niu bàn chân',
-      ctaText: '385.000₫ + TẶNG TẤT REN ➔ CLICK GIỎ HÀNG',
+      ctaText: '59.600₫ + TẶNG TẤT REN ➔ CLICK GIỎ HÀNG',
     },
     cta: 'Click giỏ hàng đặt ngay hôm nay kẻo lỡ ưu đãi nhé!',
     editingInstructions: {
@@ -532,7 +532,7 @@ export const P001_VARIATIONS: VideoVariation[] = [
         { claim: 'Quai ngang thanh mảnh', source: 'Verified Facts', status: 'VERIFIED' },
         { claim: 'Đế cao su đúc 3.5cm', source: 'Verified Facts', status: 'VERIFIED' },
         { claim: 'Lót trong êm ái thoáng khí', source: 'Verified Facts', status: 'VERIFIED' },
-        { claim: 'Giá 385.000đ tặng tất ren', source: 'Product Profile', status: 'VERIFIED' },
+        { claim: 'Giá 59.600đ tặng tất ren', source: 'Product Profile', status: 'VERIFIED' },
       ],
       feedback: 'Văn phong chân thật, không dùng từ ngữ quảng cáo quá đà, độ tin cậy tuyệt đối.',
     },
@@ -544,7 +544,7 @@ export const P001_PRODUCTION_SHEET: ProductionSheetData = {
   productProfile: {
     productName: 'Giày Mary Jane Nữ Da Bò Mũi Tròn Phối Nơ & Khóa Cài Cổ Điển',
     category: 'Giày dép & Thời trang nữ',
-    price: '385.000 ₫ (Flash Sale Tặng Kèm Tất Ren Vintage)',
+    price: '59.600 ₫ (Flash Sale Tặng Kèm Tất Ren Vintage)',
     keyFeaturesSummary: 'Chất liệu da bò thật mềm êm, mũi giày bo tròn cổ điển phối nơ da may tỉ mỉ, quai ngang Mary Jane bản mảnh với khóa cài kim loại ánh kim cao cấp. Đế cao su đúc nguyên khối chống trơn trượt cao 3.5cm tôn dáng, lót trong êm ái thoáng khí không đau chân khi đi bộ nhiều. Phong cách vintage Lolita / French Chic thanh lịch.',
     perceivedValue: 'Chất lượng da thật cao cấp, phom dáng chuẩn chỉ tương đương các mẫu boutique thiết kế 700.000đ - 900.000đ.',
   },
@@ -554,7 +554,7 @@ export const P001_PRODUCTION_SHEET: ProductionSheetData = {
     'Quai ngang Mary Jane bản mảnh kèm khóa cài kim loại mạ ánh kim cao cấp',
     'Đế cao su đúc nguyên khối chống trơn trượt, chiều cao đế 3.5cm tôn dáng vừa vặn',
     'Lót giày bọt biển đàn hồi êm ái thoáng khí, không gây phồng rộp gót chân khi đi bộ nhiều',
-    'Giá bán chính xác: 385.000 VNĐ (đã xác minh)',
+    'Giá bán chính xác: 59.600 VNĐ (đã xác minh)',
     'Quà tặng kèm theo: Tất ren vintage Lolita cao cấp',
     'Phong cách thiết kế: Vintage Parisian Chic / Lolita thanh lịch',
   ],
@@ -574,13 +574,13 @@ export const P001_PRODUCTION_SHEET: ProductionSheetData = {
       'Giá các mẫu giày da thật ngoài boutique quá đắt (700k - 1 triệu)',
     ],
     desiresAndTriggers: [
-      'Sở hữu đôi giày da bò thật êm ái với mức giá hạt dẻ 385.000đ',
+      'Sở hữu đôi giày da bò thật êm ái với mức giá hạt dẻ 59.600đ',
       'Đế 3.5cm vừa tôn dáng nhẹ nhàng vừa an toàn thoải mái',
       'Thích được tặng kèm quà tặng xinh xắn (tất ren vintage)',
     ],
   },
   usp: {
-    primaryUsp: 'Giày Mary Jane da bò thật mềm êm, đế cao su đúc 3.5cm chống đau gót với mức giá chỉ 385.000đ tặng kèm tất ren vintage.',
+    primaryUsp: 'Giày Mary Jane da bò thật mềm êm, đế cao su đúc 3.5cm chống đau gót với mức giá chỉ 59.600đ tặng kèm tất ren vintage.',
     secondaryUsps: [
       'Nơ da may thủ công tinh xảo, khóa cài kim loại mạ ánh kim sang trọng',
       'Phom mũi tròn cổ điển ôm chân, không kén dáng bàn chân',
@@ -593,7 +593,7 @@ export const P001_PRODUCTION_SHEET: ProductionSheetData = {
       id: 'SA01',
       title: 'PRICE / VALUE (Giá trị vượt trội)',
       coreInsight: 'Khách hàng muốn sở hữu đồ da thật nhưng e ngại giá tiền đắt đỏ ngoài shop.',
-      angleDescription: 'So sánh mức giá 385.000đ với giày tiền triệu ngoài tiệm, nhấn mạnh quà tặng tất ren.',
+      angleDescription: 'So sánh mức giá 59.600đ với giày tiền triệu ngoài tiệm, nhấn mạnh quà tặng tất ren.',
       emotionalTrigger: 'Cảm giác mua được món đồ cao cấp với mức giá quá hời.',
     },
     {
@@ -631,7 +631,7 @@ export const P001_PRODUCTION_SHEET: ProductionSheetData = {
       angleTitle: 'PRICE / VALUE',
       visualHook: 'Zoom cận cảnh nơ da và hiện chữ ĐỪNG MUA GIÀY TIỆM 800K VỘI!',
       audioHook: 'Đừng chi gần triệu bạc ra shop mua giày Mary Jane nếu bạn chưa biết đến em này!',
-      textOnScreen: 'GIÀY DA THẬT 385K + TẶNG TẤT REN',
+      textOnScreen: 'GIÀY DA THẬT 59.600Đ + TẶNG TẤT REN',
       retentionTactic: 'Tạo sự ngạc nhiên về mức giá so với chất liệu da bò thật.',
     },
     {
@@ -646,7 +646,7 @@ export const P001_PRODUCTION_SHEET: ProductionSheetData = {
       angleId: 'SA03',
       angleTitle: 'PRODUCT DETAIL',
       visualHook: 'Macro cận cảnh đường kim mũi chỉ nơ da và khóa kim loại.',
-      audioHook: 'Soi cận cảnh đôi Mary Jane da bò thật 385 cành xem có xịn sò như lời đồn không nha!',
+      audioHook: 'Soi cận cảnh đôi Mary Jane da bò thật chưa tới sáu mươi nghìn xem có xịn sò như lời đồn không nha!',
       textOnScreen: 'SOI TỪNG ĐƯỜNG MAY DA BÒ THẬT',
       retentionTactic: 'Đáp ứng mong muốn kiểm tra chất lượng của người mua kỹ tính.',
     },
@@ -657,7 +657,7 @@ export const P001_PRODUCTION_SHEET: ProductionSheetData = {
       angleTitle: 'PRICE / VALUE',
       estimatedDuration: '19s',
       pacing: 'Nhịp điệu sôi nổi, dứt khoát, nhấn mạnh giá trị',
-      scriptBody: 'Đừng chi gần triệu bạc ra shop mua giày Mary Jane nếu bạn chưa biết đến em này. Chỉ 385 cành mà làm từ da bò thật mềm êm, mũi tròn phối nơ siêu xinh. Đế cao su đúc 3 phân rưỡi hack dáng cực khéo, đi bộ cả ngày không lo đau gót. Đợt này còn được tặng kèm đôi tất ren vintage nữa. Nhấn ngay vào giỏ hàng bên dưới để rinh ngay ưu đãi nhé!',
+      scriptBody: 'Đừng chi gần triệu bạc ra shop mua giày Mary Jane nếu bạn chưa biết đến em này. Chỉ chưa tới sáu mươi nghìn mà làm từ da bò thật mềm êm, mũi tròn phối nơ siêu xinh. Đế cao su đúc 3 phân rưỡi hack dáng cực khéo, đi bộ cả ngày không lo đau gót. Đợt này còn được tặng kèm đôi tất ren vintage nữa. Nhấn ngay vào giỏ hàng bên dưới để rinh ngay ưu đãi nhé!',
       visualCues: [
         '00:00 - 00:03: S001 Hero Shot 45°',
         '00:03 - 00:08: S002 Detail Macro vân da & nơ',
@@ -669,8 +669,8 @@ export const P001_PRODUCTION_SHEET: ProductionSheetData = {
   cta: [
     {
       type: 'Flash Sale Urgent',
-      script: 'Nhấn ngay vào giỏ hàng bên dưới góc trái để nhận ngay ưu đãi 385k và quà tặng tất ren vintage nhé!',
-      onScreenBanner: '⚡ FLASH SALE 385K • TẶNG TẤT REN • BẤM GIỎ HÀNG NGAY',
+      script: 'Nhấn ngay vào giỏ hàng bên dưới góc trái để nhận ngay ưu đãi chưa tới sáu mươi nghìn và quà tặng tất ren vintage nhé!',
+      onScreenBanner: '⚡ FLASH SALE 59.600Đ • TẶNG TẤT REN • BẤM GIỎ HÀNG NGAY',
       urgencyTactic: 'Số lượng quà tặng tất ren vintage có hạn theo từng đợt Flash Sale.',
     },
   ],
@@ -712,7 +712,7 @@ export const P001_PRODUCTION_SHEET: ProductionSheetData = {
     { checkItem: 'Kiểm tra chi tiết nơ da may tay', whyItMatters: 'Điểm nhấn thiết kế quan trọng nhất tạo nên vẻ đẹp vintage.', statusDefault: true },
     { checkItem: 'Kiểm tra chiều cao đế 3.5cm', whyItMatters: 'Đảm bảo tôn dáng nhưng không làm đau chân.', statusDefault: true },
     { checkItem: 'Kiểm tra quà tặng tất ren vintage', whyItMatters: 'Yếu tố gia tăng tỷ lệ chuyển đổi đơn hàng.', statusDefault: true },
-    { checkItem: 'Kiểm tra giá bán 385.000 VNĐ', whyItMatters: 'Tuyệt đối trung thực về giá bán trên video affiliate.', statusDefault: true },
+    { checkItem: 'Kiểm tra giá bán 59.600 VNĐ', whyItMatters: 'Tuyệt đối trung thực về giá bán trên video affiliate.', statusDefault: true },
   ],
   generatedAt: '2026-08-20T19:00:00.000Z',
   platform: 'TikTok',
@@ -743,7 +743,7 @@ export const P001_AUDIO_BANK: Record<string, AudioBankItem> = {
     productId: 'Giày Mary Jane Nữ Da Bò Mũi Tròn Phối Nơ & Khóa Cài Cổ Điển',
     videoId: 'P001_V01',
     scriptVersion: 'v1.0 (SCRIPT APPROVED)',
-    salesAngle: 'PRICE / VALUE (385.000 VNĐ)',
+    salesAngle: 'PRICE / VALUE (59.600 VNĐ)',
     voiceProfile: {
       gender: 'female',
       style: 'natural',
@@ -756,7 +756,7 @@ export const P001_AUDIO_BANK: Record<string, AudioBankItem> = {
     duration: 0,
     targetDuration: 19,
     durationStatus: 'DURATION MISMATCH',
-    voiceDirection: 'Giọng Nữ | natural | Nhịp vừa phải ➔ [PRICE / VALUE]: Rõ ràng, thân thiện, nhịp hơi nhanh, nhấn mạnh vào mức giá 385k và ưu đãi tặng tất ren một cách thuyết phục nhưng không chém gió.',
+    voiceDirection: 'Giọng Nữ | natural | Nhịp vừa phải ➔ [PRICE / VALUE]: Rõ ràng, thân thiện, nhịp hơi nhanh, nhấn mạnh vào mức giá chưa tới sáu mươi nghìn và ưu đãi tặng tất ren một cách thuyết phục nhưng không chém gió.',
     voiceQc: null,
     isApproved: false,
     approvedAt: null,
@@ -781,8 +781,8 @@ export const PROJECT_P001: ProductionProject = {
   id: 'P001',
   name: 'Giày Mary Jane Nữ Da Bò Mũi Tròn Phối Nơ & Khóa Cài Cổ Điển',
   category: 'Giày dép & Thời trang nữ',
-  price: '385.000 ₫ (Flash Sale Tặng Kèm Tất Ren Vintage)',
-  verifiedPrice: '385.000 VNĐ',
+  price: '59.600 ₫ (Flash Sale Tặng Kèm Tất Ren Vintage)',
+  verifiedPrice: '59.600 VNĐ',
   description: `Chất liệu da bò thật mềm êm, mũi giày bo tròn cổ điển phối nơ da may tỉ mỉ, quai ngang Mary Jane bản mảnh với khóa cài kim loại ánh kim cao cấp. Đế cao su đúc nguyên khối chống trơn trượt cao 3.5cm tôn dáng, lót trong êm ái thoáng khí không đau chân khi đi bộ nhiều. Phong cách vintage Lolita / French Chic thanh lịch.`,
   targetAudience: `Nữ giới 18 - 32 tuổi yêu thích phong cách thời trang Vintage, Parisian Chic, Lolita nhẹ nhàng hoặc nữ sinh, dân công sở phối cùng váy xòe, blazer.`,
   platform: 'TikTok',

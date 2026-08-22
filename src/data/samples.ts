@@ -58,7 +58,7 @@ export const SAMPLE_PRODUCTS: SampleProduct[] = [
   {
     id: 'sample-5',
     name: 'Giày Mary Jane Nữ Da Bò Mũi Tròn Phối Nơ & Khóa Cài Cổ Điển',
-    price: '385.000 ₫ (Flash Sale Tặng Kèm Tất Ren Vintage)',
+    price: '59.600 ₫ (Flash Sale Tặng Kèm Tất Ren Vintage)',
     category: 'Giày dép & Thời trang nữ',
     description: `Chất liệu da bò thật mềm êm, mũi giày bo tròn cổ điển phối nơ da may tỉ mỉ, quai ngang Mary Jane bản mảnh với khóa cài kim loại ánh kim cao cấp. Đế cao su đúc nguyên khối chống trơn trượt cao 3.5cm tôn dáng, lót trong êm ái thoáng khí không đau chân khi đi bộ nhiều. Phong cách vintage Lolita / French Chic thanh lịch.`,
     targetAudience: `Nữ giới 18 - 32 tuổi yêu thích phong cách thời trang Vintage, Parisian Chic, Lolita nhẹ nhàng hoặc nữ sinh, dân công sở phối cùng váy xòe, blazer.`,
