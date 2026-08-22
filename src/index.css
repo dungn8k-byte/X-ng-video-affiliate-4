@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* Hide scrollbar for clean quick jump navigation */
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@media print {
+  /* Clean print layout */
+  header,
+  footer,
+  #affiliate-product-form,
+  #header-reset-btn,
+  #copy-all-sheet-btn,
+  #download-md-btn,
+  #print-sheet-btn,
+  .lg\:col-span-5 {
+    display: none !important;
+  }
+
+  body,
+  main {
+    background: white !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .lg\:col-span-7 {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  section {
+    break-inside: avoid;
+    box-shadow: none !important;
+    border: 1px solid #cbd5e1 !important;
+    margin-bottom: 1.5rem !important;
+  }
+}
