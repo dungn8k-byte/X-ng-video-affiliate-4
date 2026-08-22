@@ -1,0 +1,6 @@
+{
+  "name": "XƯỞNG VIDEO AFFILIATE 4.0 – VOICE FACTORY",
+  "description": "Xưởng Video Affiliate 4.0 tích hợp Voice Factory: Chuyển đổi Voice Script đã duyệt thành Voice-over AI (Gemini TTS / Vbee Manual), Voice Profile chuẩn hóa thương hiệu, Voice Direction theo Sales Angle, Duration Check & Voice QC, và Audio Bank hoàn chỉnh.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
