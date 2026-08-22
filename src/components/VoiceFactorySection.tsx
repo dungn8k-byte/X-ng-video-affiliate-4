@@ -324,11 +324,11 @@ export const VoiceFactorySection: FC<VoiceFactorySectionProps> = ({
   };
 
   // Extract target duration from variation estimatedDuration or timeline
-  const parseTargetDuration = (estimatedDurationStr?: string): number => {
+  function parseTargetDuration(estimatedDurationStr?: string): number {
     if (!estimatedDurationStr) return 18;
     const match = estimatedDurationStr.match(/(\d+)/);
     return match ? parseInt(match[1], 10) : 18;
-  };
+  }
 
   // Toggle Audio Playback for a specific Video Variation
   const handleTogglePlayAudio = (videoId: string, audioUrl: string) => {

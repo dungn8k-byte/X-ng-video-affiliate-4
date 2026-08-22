@@ -9,7 +9,6 @@ import {
 } from '../types';
 import { SAMPLE_PRODUCTS } from './samples';
 import { safeUtf8ToBase64 } from '../utils/encoding';
-import { generateSyntheticWavAudio } from '../utils/audioGenerator';
 
 // Sample Mary Jane Image
 const MARY_JANE_IMAGE = SAMPLE_PRODUCTS.find((p) => p.id === 'sample-5')?.imageThumbnail || '';
@@ -752,49 +751,15 @@ export const P001_AUDIO_BANK: Record<string, AudioBankItem> = {
       geminiVoiceName: 'Kore',
     },
     engine: 'GEMINI_TTS',
-    voiceStatus: 'READY',
-    audioUrl: generateSyntheticWavAudio(18, 24000, 220),
-    duration: 18.0,
-    targetDuration: 18,
-    durationStatus: 'DURATION PASS',
+    voiceStatus: 'NOT_CREATED',
+    audioUrl: null,
+    duration: 0,
+    targetDuration: 19,
+    durationStatus: 'DURATION MISMATCH',
     voiceDirection: 'Giọng Nữ | natural | Nhịp vừa phải ➔ [PRICE / VALUE]: Rõ ràng, thân thiện, nhịp hơi nhanh, nhấn mạnh vào mức giá 385k và ưu đãi tặng tất ren một cách thuyết phục nhưng không chém gió.',
-    voiceQc: {
-      status: 'VOICE QC PASS',
-      score: 96,
-      durationStatus: 'DURATION PASS',
-      diffSec: 0,
-      fullScriptRead: {
-        status: 'PASS',
-        note: 'Đọc đầy đủ 53 từ trong kịch bản Voice Script của P001_V01.',
-      },
-      noAddedOrDroppedSentences: {
-        status: 'PASS',
-        note: 'Không thêm bớt câu chữ, trung thực tuyệt đối về mức giá 385.000 VNĐ.',
-      },
-      pacingAndSpeed: {
-        status: 'PASS',
-        note: 'Tốc độ 2.9 từ/giây chuẩn tự nhiên, dễ nghe.',
-      },
-      naturalPauses: {
-        status: 'PASS',
-        note: 'Khoảng ngắt nghỉ tại dấu câu rõ ràng, nhấn nhá tốt.',
-      },
-      volumeLevels: {
-        status: 'PASS',
-        note: 'Âm lượng chuẩn hóa 0dBFS cân bằng, không rè tiếng.',
-      },
-      brandPronunciation: {
-        status: 'PASS',
-        note: 'Phát âm chuẩn xác: Mary Jane, Lolita, French Chic.',
-      },
-      durationAlignment: {
-        status: 'PASS',
-        note: 'Thời lượng 18.0s khớp hoàn hảo với Timeline mục tiêu 18s.',
-      },
-      summary: 'Bản thu âm P001_V01 đã được Human QC duyệt đạt chuẩn tuyệt đối (VOICE APPROVED), là tài sản khóa không thể bị ghi đè.',
-    },
-    isApproved: true,
-    approvedAt: '2026-08-20T19:10:00.000Z',
+    voiceQc: null,
+    isApproved: false,
+    approvedAt: null,
     createdAt: '2026-08-20T19:08:00.000Z',
   },
 };

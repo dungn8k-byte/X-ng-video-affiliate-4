@@ -1,7 +1,11 @@
 import { AudioBankItem } from '../types';
 import { P001_AUDIO_BANK } from '../data/projectStore';
+import { generateSyntheticWavAudio } from './audioGenerator';
 
 const AUDIO_STORAGE_KEY_PREFIX = 'xuong_audio_bank_v4_';
+
+const LEGACY_P001_V01_SYNTHETIC_AUDIO =
+  generateSyntheticWavAudio(18, 24000, 220);
 
 function normalizeProjectId(projectIdOrName: string = 'P001'): string {
   const raw = String(projectIdOrName || 'P001').trim();
@@ -35,24 +39,70 @@ function isAudioBankItem(value: unknown): value is AudioBankItem {
 
 function sanitizeBank(value: unknown): Record<string, AudioBankItem> {
   if (!value || typeof value !== 'object' || Array.isArray(value)) return {};
+
   const result: Record<string, AudioBankItem> = {};
-  for (const [key, candidate] of Object.entries(value as Record<string, unknown>)) {
+
+  for (const [key, candidate] of Object.entries(
+    value as Record<string, unknown>
+  )) {
     if (!isAudioBankItem(candidate)) continue;
-    // blob: URLs do not survive a reload. Never restore them as durable audio.
-    if (typeof candidate.audioUrl === 'string' && candidate.audioUrl.startsWith('blob:')) {
+
+    // Legacy P001_V01 synthetic test tone: exact signature only.
+    if (
+      key === 'P001_V01' &&
+      candidate.videoId === 'P001_V01' &&
+      candidate.audioUrl === LEGACY_P001_V01_SYNTHETIC_AUDIO
+    ) {
+      result[key] = {
+        ...candidate,
+        audioUrl: null,
+        duration: 0,
+        targetDuration: 19,
+        durationStatus: 'DURATION MISMATCH',
+        voiceStatus: 'NOT_CREATED',
+        voiceQc: null,
+        isApproved: false,
+        approvedAt: null,
+        error: null,
+      };
+      continue;
+    }
+
+    // GENERATING restored after reload is stale.
+    if (candidate.voiceStatus === 'GENERATING') {
+      result[key] = {
+        ...candidate,
+        voiceStatus: 'RETRY_REQUIRED',
+        isApproved: false,
+        error:
+          'Phiên tạo Voice trước đã kết thúc hoặc bị gián đoạn. Hãy thử lại thủ công.',
+      };
+      continue;
+    }
+
+    // blob URLs cannot survive browser reload.
+    if (
+      typeof candidate.audioUrl === 'string' &&
+      candidate.audioUrl.startsWith('blob:')
+    ) {
       result[key] = {
         ...candidate,
         audioUrl: null,
         duration: 0,
         durationStatus: 'DURATION MISMATCH',
-        voiceStatus: candidate.isApproved ? candidate.voiceStatus : 'NOT_CREATED',
+        voiceStatus: candidate.isApproved
+          ? candidate.voiceStatus
+          : 'NOT_CREATED',
         voiceQc: candidate.isApproved ? candidate.voiceQc : null,
-        error: candidate.isApproved ? candidate.error : 'Audio tạm thời đã hết hiệu lực sau khi tải lại.',
+        error: candidate.isApproved
+          ? candidate.error
+          : 'Audio tạm thời đã hết hiệu lực sau khi tải lại.',
       };
     } else {
       result[key] = candidate;
     }
   }
+
   return result;
 }
 
@@ -67,11 +117,6 @@ export function mergeAudioBanks(
     return { ...acc, ...sanitizeBank(bank) };
   }, base);
 
-  // Preserve the immutable seeded P001_V01 only if persisted data tries to downgrade it.
-  if (projectId === 'P001' && P001_AUDIO_BANK.P001_V01?.isApproved) {
-    const current = merged.P001_V01;
-    if (!current?.isApproved) merged.P001_V01 = { ...P001_AUDIO_BANK.P001_V01 };
-  }
   return merged;
 }
 
